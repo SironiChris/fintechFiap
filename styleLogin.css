@@ -1,0 +1,105 @@
+html
+{   
+    margin: 0 0 0 50px ; 
+    position: fixed;
+    width: 414px;
+    height: 896px;
+}
+body{
+    background-image: url(img/fundoLogin.png);
+    background-repeat: no-repeat;
+    background-size: 414px 450px ;
+    
+    background-position-y: 438px;
+}
+text:focus, input:focus, select:focus {
+    outline: 0;
+}
+.icone{
+    padding-top: 92px;
+    
+}
+#IconeLogo {
+   width: 298px; 
+   height: 180px;
+}
+#iconeNome{
+    width: 298px;
+    height: 123px;
+    padding-top: 5px;
+    
+}
+.boxLogin{
+    padding-top: 50px ;
+}
+.imgIcone{
+    width: 36px;
+    height: 36px;
+}
+.imgSenha{
+    width: 20px;
+    height: 20px;
+}
+.caixaTexto{
+    width: 250px ;
+    border: none;
+    background: transparent;
+    font-family: 'Heinch';
+    font-size: 24px  ;
+    vertical-align: super;
+}
+.caixaTexto::placeholder{
+    color:#9A9797 ;
+}
+.boxUsu{
+    border-bottom: 2px solid #005E9E;
+    width: 320px;
+}
+.boxSenha{
+    padding-top: 2em;
+    border-bottom: 2px solid #005E9E;
+    width: 320px;
+    
+}
+.linkSenha{
+    font-family: 'Heinch';
+    color:#9A9797 ;
+}
+.linkSenha:hover{
+    color:#005E9E;
+}
+.stylebutton{
+    margin-top: 50px;   
+    margin-left: 80px;
+    margin-bottom: 80px;
+    width: 166px;
+    height: 46px;
+    font-family: 'Heinch';
+    font-size: 24px  ;
+    color: white;
+    background-color: #005E9E;
+    border-radius: 12px;
+    border: none;
+    
+}
+.stylebutton:hover{
+    background-color: #9A9797;
+}
+.inscrever{
+    mmargin-top: 50px;
+    padding-left: 80px;
+    font-family: 'Heinch';
+    color:#005E9E;
+    font-size: 30px
+}
+.inscrever:hover{
+    color:#9A9797
+}
+.background {
+    
+    disabled;
+
+    width: 414px;
+    height: 496px;
+
+}

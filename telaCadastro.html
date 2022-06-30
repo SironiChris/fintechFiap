@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/heinch" rel="stylesheet">
+    <link rel="stylesheet" href="styleCadastro.css">
+    <title>FINTECH - Cadastro</title>
+</head>
+    <script>
+         function senhaMostrar() {
+            var olho = document.getElementById("Senha");
+            if (olho.type == "password") {
+                olho.type = "text";
+            }
+            else if(olho.type != "password") {
+                olho.type = "password";
+            }
+        }
+         function senhaMostrar2() {
+            var olho = document.getElementById("confirmSenha");
+            if (olho.type == "password") {
+                olho.type = "text";
+            }
+            else if(olho.type != "password") {
+                olho.type = "password";
+            }
+        }
+
+        function valida() {
+            if(document.getElementById("Senha").value != document.getElementById("confirmSenha").value)
+            {
+                alert('confime a senha')
+                document.getElementById("confirmSenha").focus()
+                return false;   
+            }
+
+           
+        }
+        
+    </script>
+    <body>
+        <div onclick="window.location='TelaLogin.html'">
+            <img src="img/logo.png" alt="logo" id="IconeLogo" class="icone">
+            <img src="img/logoname.png" alt="logo" id="iconeNome" class="icone">
+        </div>
+        <h1 class="titulo">&nbsp;&nbsp;&nbsp;CRIE SUA CONTA</h1>
+        <form action="">
+            <div id="boxLogin" class="boxLogin">
+                <div for="" class="boxUsu">
+                    <img src="img/iconeLogin.png" alt="" class="imgIcone">
+                    <input type="text" class="caixaTexto" required placeholder="            NOME DO USUARIO">
+                </div>
+                <div for="" class="boxEmail">
+                    <img src="img/email.png" alt="" class="imgIcone">
+                    <input type="text" class="caixaTexto" required placeholder="                    E-MAIL">
+                </div>
+                <div for="" class="boxSenha" nowrap>
+                    <img src="img/iconeSenha.png" alt="" class="imgIcone">
+                    <input type="password" class="caixaTexto" id="Senha" required placeholder="                    SENHA">
+                    <img src="img/olho.png" class="imgSenha" id="olhoSenha" alt="" onclick="senhaMostrar()">
+                </div>
+                <div for="" class="boxSenha" nowrap>
+                    <img src="img/iconeSenha.png" alt="" class="imgIcone">
+                    <input type="password" class="caixaTexto" id="confirmSenha" required placeholder="          CONFIRME A SENHA">
+                    <img src="img/olho.png" class="imgSenha" id="olhoSenha2" alt="" onclick="senhaMostrar2()">
+                </div>
+            </div>   
+            <input type="submit" id="Enviar" class="stylebutton" value="INSCREVER-SE" onclick="valida()">
+        </form>
+    </body>
+</html>

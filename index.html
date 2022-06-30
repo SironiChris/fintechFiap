@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/heinch" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/thasadith-2" rel="stylesheet">
+    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>FINTECH - Menu Principal</title>
+</head>
+<script>
+    function enter(){
+        if(event.key == 'Enter')
+        {
+            alert('simulação de pesquisa')
+        }
+    }
+
+    function ocultar(){
+        var text = document.getElementById('saldoAtual').innerHTML
+        var receitas = document.getElementById('valorPositivo').innerHTML
+        var despesas = document.getElementById('valorNegativo').innerHTML
+        
+        if( text == "R$ 800,00" )
+        {
+            
+            document.getElementById('saldoAtual').innerHTML = text.replace("800,00" ,  "******")
+            
+        }
+        else{
+
+            document.getElementById('saldoAtual').innerHTML = text.replace("******" , "800,00")
+           
+        }
+        if (receitas == "R$ 1.700,00") 
+        {
+            document.getElementById('valorPositivo').innerHTML = receitas.replace("1.700,00" , "******")
+        }
+        else
+        {
+            document.getElementById('valorPositivo').innerHTML = receitas.replace("******" , "1.700,00")
+        }
+        if (despesas == "R$ 900,00") 
+        {
+            document.getElementById('valorNegativo').innerHTML = despesas.replace("900,00" , "******")
+        }
+        else
+        {
+            document.getElementById('valorNegativo').innerHTML = despesas.replace("******" , "900,00")
+        }
+    }
+</script>
+<header>
+    <div class="cabecalho">
+        <img src="img/miniLogo.png" alt="logo" class="miniLogo">
+        <img src="img/opções.png" alt="opções" class="opcoes">
+    </div>
+</header>
+<body>
+    <div class="Pesquisa">
+        <img src="img/lupa.png" class="lupa" alt="lupa">
+        <input type="text" placeholder="    Buscar" class="barrapesq" onkeydown="enter()">
+    </div>
+    <div class="dash">
+        <details>
+            <summary class="mes">ABRIL</summary>
+            <div class="dashboard">
+                <font id="saldo"> Saldo atual</font>
+                <h1 class="contentDash" id="saldoAtual">R$ ******</h1>
+                <img src="img/olhoDashboard.png" alt="" class="olhodash" onclick="ocultar()">
+
+                <div class="valores">
+                    <div class="receitas">
+                        <img src="img/setaUP.png" alt="" class="seta" id="setaUp">
+                        <div class="valoresContent">
+                            <p class="tituloValor">Receitas</p>
+                            <h2 class="valorReceita" id="valorPositivo">R$ ******</h2>
+                        </div>
+                    </div>
+                    <div class="despesas">
+                        <img src="img/setaDown.png" alt="" class="seta" id="setaDown">
+                        <div class="valoresContent">
+                            <p class="tituloValor">Despesas</p>
+                            <h2 class="valorReceita" id="valorNegativo">R$ ******</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="telaPrincipal">
+        <div class="menus">
+            <div>
+                <img src="img/conta.png" class="iconesMenus" id="contaBancaria" alt=""
+            </div>
+            <div>
+                <img src="img/invest.png" class="iconesMenus" alt="">
+            </div>
+            <div>
+                <img src="img/calc.png" class="iconesMenus" alt="">
+            </div>
+            <div>
+                <img src="img/objetivo.png" class="iconesMenus" alt="">
+            </div>
+        </div>
+    </div>
+   
+    <div class="boxGrafico">
+        <h2 class="tituloDespesas">Despesas</h2>
+        <div class="pieContainer">
+            <div class="pieBackground"></div>
+            <div id="pieSlice1" class="hold"><div class="pie"></div></div>
+            <div id="pieSlice2" class="hold"><div class="pie"></div></div>
+            <div id="pieSlice3" class="hold"><div class="pie"></div></div>
+            <div id="pieSlice4" class="hold"><div class="pie"></div></div>
+       </div>
+       <div class="legenda">
+            <div class="boxLegenda">
+                <div class="tableLegenda">
+                    <table>
+                        <tr class="linhas">
+                            <td class="pontoLegenda" id="icone1">•</td>
+                            <td class="nomeLegenda">Fixas</td>
+                            <td class="valorLegenda">   R$450,00</td>
+                        </tr>
+                        <tr  class="linhas">
+                            <td class="pontoLegenda" id="icone2">•</td>
+                            <td class="nomeLegenda">Variável</td>
+                            <td class="valorLegenda">   R$250,00</td>
+                        </tr>
+                        <tr  class="linhas">
+                            <td class="pontoLegenda" id="icone3">•</td>
+                            <td class="nomeLegenda">Outros</td>
+                            <td class="valorLegenda">   R$200,00</td>
+                        </tr>
+                       </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divButton" >
+        <input type="button" class="botoes" value="Adicionar Receitas">
+        <input type="button" class="botoes" value="Adicionar Despesas">
+    </div>
+    <div class="branco" id="divbranco">
+        <input type="hidden">
+    </div>
+</body>
+<footer>
+    <div class="divRodape" >
+        <img src="img/footer.png" class="rodape" alt="">
+        <div class="botoesRodape">
+            <img src="img/Conta1.png" class="rodapeConta" alt="">
+            <img src="img/Planejamento1.png" class="rodapePlan" alt="">
+            <img src="img/Transi1.png" class="rodapeTransi" alt="">
+            <img src="img/config1.png" class="rodapeConfig" alt="">
+        </div>
+    </div>
+</footer>
+</html>
+

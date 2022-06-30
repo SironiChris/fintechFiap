@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/heinch" rel="stylesheet">
+    <link rel="stylesheet" href="styleLogin.css">
+    <title>FINTECH</title>
+    <script>
+    function login()
+    {
+        
+        if(document.getElementById("Usuario").value != "" && document.getElementById("Senha").value != "")
+        {   
+            window.location.assign('index.html')
+        }
+        else{
+
+            
+        }
+    }
+    function senhaMostrar() {
+            var olho = document.getElementById("Senha");
+            if (olho.type == "password") {
+                olho.type = "text";
+            }
+            else if(olho.type != "password") {
+                olho.type = "password";
+            }
+        }
+           
+    </script>
+</head>
+    <body>
+        <img src="img/logo.png" alt="logo" id="IconeLogo" class="icone">
+        <img src="img/logoname.png" alt="logo" id="iconeNome" class="icone">
+        <form action="">
+            <div id="boxLogin" class="boxLogin">
+                <div for="" class="boxUsu">
+                    <img src="img/iconeLogin.png" alt="" class="imgIcone">
+                    <input type="text" class="caixaTexto" id="Usuario" required placeholder="            NOME DO USUARIO">
+                </div>
+                <div for="" class="boxSenha" nowrap>
+                    <img src="img/iconeSenha.png" alt="" class="imgIcone">
+                    <input type="password" class="caixaTexto" id="Senha" required placeholder="                    SENHA">
+                    <img src="img/olho.png" class="imgSenha" id="olhoSenha" alt="" onclick="senhaMostrar()">
+                </div>
+                <a class="linkSenha" href="">Esqueci Minha Senha</a>
+            </div>   
+            <input type="submit" id="Enviar" class="stylebutton" value="LOGIN" onclick="login(); window.location.assign('index.html')">
+        </form>
+        <a href="telaCadastro.html" class="inscrever">INSCREVER-SE</a>
+    </body>
+</html>
